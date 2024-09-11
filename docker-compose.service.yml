@@ -1,0 +1,16 @@
+version: '3'
+services:
+  yyoj-backend-gateway:
+    container_name: yubi-backend
+    build:
+      context: ./yubi-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - mynetwork
+
+
+# 网络，不定义的话就是默认网络
+networks:
+  mynetwork:
